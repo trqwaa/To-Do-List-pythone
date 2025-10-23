@@ -22,7 +22,8 @@ while True:
         print(f"{key}. {value}")
 
     user = input("Let's make your chouse: " )
-
+    if user == 1:
+        print
 
 
 
