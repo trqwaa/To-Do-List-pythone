@@ -9,8 +9,6 @@ menu = {
     4: "Exit"
 }
 user_list = []
-#_____________________________
-
 #============Menu(Ready V-1)============
 
 while True:
@@ -21,8 +19,6 @@ while True:
 
     menu_input = input("Let's make your chouse: " )
 
-#_____________________________
-
 #============Add task(Ready V-1)============
 
     if menu_input == '1':
@@ -32,8 +28,6 @@ while True:
         user_list.append(add_task_input)
         print( add_task_input + " was added")
 
-#_____________________________
-
 #============Show tasks(Ready V-1)============
     elif menu_input == '2':
 
@@ -42,8 +36,6 @@ while True:
         print(user_list)
 
         print('________________________________')
-
-#_____________________________
 
 #============Delete task(NEED TO WORK)============
 
@@ -56,14 +48,17 @@ while True:
                 print("was removed " + "'" + worts + "'")
         print("your list at the moment: " + ", ".join(map(str, user_list)))
 
- #_____________________________  
- 
-#============Exit(is being created)============
+#============Exit(NEED TO WORK)============
 
     elif menu_input == '4':
-        None
+        print('========== Exit ==========')
+        Exit_user = input("Do you want to liev ?----Yes/No----:  ")
+        if Exit_user == 'Yes'.lower():
+            print('Byeeee!')
+            break
+        else:
+            None
 
-#_____________________________
 
 
 
