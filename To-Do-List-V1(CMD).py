@@ -14,46 +14,55 @@ user_list = []
 while True:
     
     print('========== Welcome to the TO-DO-LIST menu ==========')
+    print("\n" * 2)
     for key, value in menu.items():
-        print(f"{key}. {value}")
-
+        print(f"{key}. {value}" )
+    print("\n")   
     menu_input = input("Let's make your chouse: " )
-
+    print("\n" * 2)
 #============Add task(Ready V-1)============
 
     if menu_input == '1':
         print('========== Add task ==========')
+        print("\n" * 2)
 
         add_task_input = input("Let's write down the list: ")
         user_list.append(add_task_input)
         print( add_task_input + " was added")
-
+        print("\n" * 2)
 #============Show tasks(Ready V-1)============
     elif menu_input == '2':
 
         print('========== Show tasks ==========')
+        print("\n")
 
-        print(user_list)
+        for x, worts in enumerate(user_list, start=1):
+            print(f"{x}. {worts}")
 
-        print('________________________________')
-
-#============Delete task(NEED TO WORK)============
+#============Delete task(Ready V-1)============
 
     elif menu_input == '3':
         print('========== Delete task ==========')
+        print("\n" * 2)
         for x, worts in enumerate(user_list, start=1):
-            delete_task_user = int(input("Select a number to delete|" + str(user_list) + ": " ))
-            if delete_task_user == x:
-                user_list.remove(worts)
-                print("was removed " + "'" + worts + "'")
+            print(f"{x}. {worts}")
+        delete_task_user = int(input("Select a number to delete: " ))
+        print("\n")
+        removed_item = user_list[delete_task_user - 1]
+        del user_list[delete_task_user - 1]
+        print("\n")
+        print("was removed " + "'" + removed_item + "'")
+        print("\n")
         print("your list at the moment: " + ", ".join(map(str, user_list)))
-
-#============Exit(NEED TO WORK)============
+        print("\n" * 2)
+#============Exit(Ready V-1)============
 
     elif menu_input == '4':
         print('========== Exit ==========')
-        Exit_user = input("Do you want to liev ?----Yes/No----:  ")
-        if Exit_user == 'Yes'.lower():
+        print("\n" * 2)
+        Exit_user = input("Do you want to leave ?----Yes/No----:  ").lower()
+        print("\n")
+        if Exit_user == 'yes':
             print('Byeeee!')
             break
         else:
