@@ -34,9 +34,14 @@ def add_task(user_list):
 def Show_tasks(user_list):
         print('========== Show tasks ==========')
         print("\n")
-
-        for x, worts in enumerate(user_list, start=1):
-            print(f"{x}. {worts}")
+        
+        if not user_list:
+              print('Nothing')
+              print("\n")
+        else:
+            for x, worts in enumerate(user_list, start=1):
+                   print(f"{x}. {worts}")
+                   print("\n")
 #============Delete task(Ready V-2)============
 def Delete_task(user_list):
         print('========== Delete task ==========')
@@ -90,4 +95,4 @@ while True:
       elif choice == '4':
             if Exit():
                   break
-            
+             
